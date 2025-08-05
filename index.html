@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Tentara Nasional Indonesia - Angkatan Udara (TNI AU). Informasi resmi, berita, sejarah, dan galeri.">
+  <meta name="author" content="TNI Angkatan Udara">
+  
+  <title>TNI Angkatan Udara | Tentara Nasional Indonesia</title>
+
+  <!-- Font Awesome Icons (Versi stabil) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-FHkF..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<!-- Navbar Atas -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="logo animate-slide-in-left">
+      Lanud <span>Abd Saleh</span>
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="nav-menu">
+      <a href="#" class="nav-link">Beranda</a>
+
+      <!-- Dropdown Sejarah -->
+      <div class="dropdown">
+        <button class="nav-link">
+          Sejarah <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#lanud" class="dropdown-item">Sejarah Lanud</a>
+          <a href="#sk4" class="dropdown-item">Skuadron 4</a>
+          <a href="#sk21" class="dropdown-item">Skuadron 21</a>
+          <a href="#sk32" class="dropdown-item">Skuadron 32</a>
+          <a href="#skatek" class="dropdown-item">Skatek 022</a>
+        </div>
+      </div>
+
+      <a href="#portfolio" class="nav-link">Berita</a>
+      <a href="#testimonials" class="nav-link">Rekruitmen</a>
+      <a href="#contact" class="nav-link">Galeri</a>
+      <a href="#about" class="nav-link">Tentang Kami</a>
+    </div>
+    
+    <!-- Tombol Mobile -->
+    <button class="mobile-menu-btn" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="mobile-menu">
+    <a href="#home" class="mobile-menu-link">Beranda</a>
+    <button onclick="toggleSubmenu()" class="mobile-menu-link w-full text-left">
+      Sejarah <i class="fas fa-caret-down float-right pt-1"></i>
+    </button>
+    <div id="submenu" class="submenu hidden">
+      <a href="#lanud" class="submenu-link">Sejarah Lanud</a>
+      <a href="#sk4" class="submenu-link">Skuadron 4</a>
+      <a href="#sk21" class="submenu-link">Skuadron 21</a>
+      <a href="#sk32" class="submenu-link">Skuadron 32</a>
+      <a href="#skatek" class="submenu-link">Skatek 022</a>
+    </div>
+    <a href="#portfolio" class="mobile-menu-link">Berita</a>
+    <a href="#testimonials" class="mobile-menu-link">Rekruitmen</a>
+    <a href="#contact" class="mobile-menu-link">Galeri</a>
+    <a href="#about" class="mobile-menu-link">Tentang Kami</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="w-full overflow-hidden">
+    <img src="assets/image/header.jpg"
+         alt="Lambang TNI Angkatan Udara"
+         class="hero-img"
+         onerror="this.style.display='none'" />
+  </div>
+</section>
+
+<!-- Content wrapper: Left sidebar + Main content + Right sidebar -->
+<div class="content-wrapper">
+  <!-- Sidebar Kiri -->
+  <aside class="sidebar sidebar-left" aria-label="Sidebar menu kiri">
+    <!-- Menu Navigasi -->
+    <nav>
+      <h3 class="sidebar-title">Menu Navigasi Sejarah</h3>
+      <ul class="nav-menu-list">
+        <li>
+          <a href="#" class="nav-menu-item">
+            <div class="pentagon-icon" aria-hidden="true"></div>
+            Sejarah Lanud
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-menu-item">
+            <div class="pentagon-icon" aria-hidden="true"></div>
+            Sejarah Skuadron 4
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-menu-item">
+            <div class="pentagon-icon" aria-hidden="true"></div>
+            Sejarah Skuadron 21
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-menu-item">
+            <div class="pentagon-icon" aria-hidden="true"></div>
+            Sejarah Skuadron 32
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-menu-item">
+            <div class="pentagon-icon" aria-hidden="true"></div>
+            Sejarah Skatek 022
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mt-20">
+      <h4 class="sidebar-title">Komandan Lanud Abd Saleh</h4>
+      <img src="assets/image/danlanud.jpg" class="sidebar-image" />
+      <h5 class="sidebar-image-caption">
+        Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS.
+      </h5>
+      <p class="sidebar-image-desc">Komandan Lanud Abd Saleh</p>
+    </div>
+
+    <div class="mt-20">
+      <h4 class="sidebar-title">
+        Video Youtube Lanud Abd Saleh
+      </h4>
+  
+      <div class="video-container">
+        <iframe class="w-full h-full"
+            src="https://www.youtube.com/embed/jdtHiZC1eJs"
+            title="Video Profil Lanud Abd Saleh"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+      </div>
+  
+      <p class="sidebar-image-desc">
+        Sumber: YouTube Resmi Lanud Abd Saleh
+      </p>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content" aria-label="Konten utama">
+    <h2 class="main-title">
+      Berita Utama <span>Lanud Abd Saleh</span>
+    </h2>
+
+    <div class="news-update-wrapper">
+      <section class="py-1">
+        <h2 class="section-title">
+          Berita Terkini
+        </h2>
+
+        <div id="news-container" class="news-container"></div>
+
+        <!-- Tombol Pagination -->
+        <div class="pagination">
+          <button
+            id="prevBtn"
+            class="pagination-btn"
+            disabled>
+            ← Sebelumnya
+          </button>
+
+          <span id="pageIndicator" class="page-indicator"></span>
+
+          <button
+            id="nextBtn"
+            class="pagination-btn">
+            Berikutnya →
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Right sidebar -->
+  <aside class="sidebar sidebar-right" aria-label="Sidebar Kanan - Info & Galeri">
+    <!-- Logo TNI & Kementerian -->
+    <section aria-label="Logo TNI & KEMHAN">
+      <h3 class="sidebar-title">TENTARA NASIONAL INDONESIA</h3>
+      <div class="related-institutions">
+        <a href="https://tni.mil.id/home" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://www.kindpng.com/picc/m/80-806921_logo-ps-tira-persikabo-hd-png-download.png" 
+                alt="TNI" 
+                class="institution-logo" />
+        </a>
+        <a href="https://tniad.mil.id" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://1.bp.blogspot.com/-hkkkK01zAI4/XqUE_ooLhrI/AAAAAAAAAMg/NLEQ496iDU4s5Ppyc8PnTxTvFIVBFzxLwCLcBGAsYHQ/s1600/TNI-AD%2B%255Bwww.blogovector.com%255D.png" 
+                alt="TNI AD" 
+                class="institution-logo" />
+        </a>
+        <a href="https://tni-au.mil.id/" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://tni-au.mil.id/assets/img/dispenau/logo_tni_au.png" 
+                alt="TNI AU" 
+                class="institution-logo" />
+        </a>
+        <a href="https://www.tnial.mil.id/" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.Akg1hali8RhOqdowdTObygAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                alt="TNI AL" 
+                class="institution-logo" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Galeri Foto -->
+    <section aria-label="Galeri Foto">
+      <h3 class="sidebar-title">GALERI FOTO</h3>
+      <div class="gallery-btn" tabindex="0" role="button" aria-pressed="false">
+        LIHAT GALERI
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <div class="about-section" aria-label="Tentang Kami">
+      <h3 class="sidebar-title with-icon">
+        Tentang Kami
+      </h3>
+      <p>
+        <strong>Alamat:</strong><br>
+        TNI AU Lanud, Krajan, Saptorenggo, Kec. Pakis, Kabupaten Malang, Jawa Timur 65154, Indonesia<br>
+        Krajan, Saptorenggo, Kec. Pakis, Kabupaten Malang, <br>
+        Jawa Timur 65154, Indonesia
+      </p>
+      <p>
+        <strong>Email:</strong><br>
+        <a href="mailto:infonet@tni-au.mil.id">sampel@tni.id</a>
+      </p>
+    </div>
+    
+    <!-- Sosial Media -->
+    <section class="social-section">
+      <h3 class="sidebar-title">Ikuti Kami</h3>
+      <div class="social-media">
+       <a href="https://www.facebook.com/abd.saleh.39501/" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/lanudabdsaleh/" class="social-btn instagram">
+          <i class="fab fa-instagram"></i>
+         <span>Instagram</span>
+        </a>
+        <a href="#" class="social-btn twitter">
+         <i class="fab fa-x-twitter"></i>
+          <span>Twitter</span>
+       </a>
+       <a href="https://www.youtube.com/@Youtubemilitary" class="social-btn youtube">
+         <i class="fab fa-youtube"></i>
+         <span>YouTube</span>
+       </a>
+      </div>
+    </section>
+  </aside>
+</div>
+
+<footer class="footer-bottom">
+  <div class="footer-container">
+    <p>&copy; 2025 Situs Resmi Lanud Abd Saleh - TNI Angkatan Udara. Seluruh hak cipta dilindungi.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

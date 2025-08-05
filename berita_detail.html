@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Detail Berita Lanud Abd Saleh - TNI AU">
+  <meta name="author" content="TNI Angkatan Udara">
+  <title>Detail Berita | Lanud Abd Saleh</title>
+
+  <!-- Font Awesome & Poppins -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-FHkF..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+.detail-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.detail-gallery .detail-img {
+  flex: 1 1 calc(33% - 10px);
+  max-width: calc(33% - 10px);
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.sidebar-news-grid .news-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.news-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  transition: background-color 0.2s ease;
+}
+
+.news-card:hover {
+  background-color: #f9f9f9;
+}
+
+.news-card img {
+  width: 70px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.news-card a {
+  font-size: 13px;
+  font-weight: 500;
+  color: #001F4E;
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.2;
+}
+
+.news-card a:hover {
+  color: #FFD700;
+}
+
+.lihat-semua-container {
+  margin-top: 12px;
+  text-align: right;
+}
+
+.lihat-semua-btn {
+  font-size: 13px;
+  color: #001F4E;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lihat-semua-btn:hover {
+  color: #FFD700;
+}
+
+.detail-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.detail-gallery .detail-img {
+  width: calc(33.33% - 10px);
+  object-fit: cover;
+  border-radius: 5px;
+}
+</style>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="logo animate-slide-in-left">
+      Lanud <span>Abd Saleh</span>
+    </div>
+
+    <!-- Menu Desktop -->
+    <div class="nav-menu">
+      <a href="index.html" class="nav-link">Beranda</a>
+
+      <!-- Dropdown Sejarah -->
+      <div class="dropdown">
+        <button class="nav-link">
+          Sejarah <i class="fas fa-caret-down"></i>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#lanud" class="dropdown-item">Sejarah Lanud</a>
+          <a href="#sk4" class="dropdown-item">Skuadron 4</a>
+          <a href="#sk21" class="dropdown-item">Skuadron 21</a>
+          <a href="#sk32" class="dropdown-item">Skuadron 32</a>
+          <a href="#skatek" class="dropdown-item">Skatek 022</a>
+        </div>
+      </div>
+
+      <a href="#portfolio" class="nav-link">Berita</a>
+      <a href="#testimonials" class="nav-link">Rekruitmen</a>
+      <a href="#contact" class="nav-link">Galeri</a>
+      <a href="#about" class="nav-link">Tentang Kami</a>
+    </div>
+    
+    <!-- Tombol Mobile -->
+    <button class="mobile-menu-btn" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu hidden" id="mobile-menu">
+    <a href="#home" class="mobile-menu-link">Beranda</a>
+    <button onclick="toggleSubmenu()" class="mobile-menu-link w-full text-left">
+      Sejarah <i class="fas fa-caret-down float-right pt-1"></i>
+    </button>
+    <div id="submenu" class="submenu hidden">
+      <a href="#lanud" class="submenu-link">Sejarah Lanud</a>
+      <a href="#sk4" class="submenu-link">Skuadron 4</a>
+      <a href="#sk21" class="submenu-link">Skuadron 21</a>
+      <a href="#sk32" class="submenu-link">Skuadron 32</a>
+      <a href="#skatek" class="submenu-link">Skatek 022</a>
+    </div>
+    <a href="#portfolio" class="mobile-menu-link">Berita</a>
+    <a href="#testimonials" class="mobile-menu-link">Rekruitmen</a>
+    <a href="#contact" class="mobile-menu-link">Galeri</a>
+    <a href="#about" class="mobile-menu-link">Tentang Kami</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="w-full overflow-hidden">
+    <img src="assets/image/header.jpg"
+         alt="Lambang TNI Angkatan Udara"
+         class="hero-img"
+         onerror="this.style.display='none'" />
+  </div>
+</section>
+
+<!-- Content wrapper: Left sidebar + Main content + Right sidebar -->
+<div class="content-wrapper">
+
+<!-- Detail Berita -->
+<main class="main-content-container">
+  <article class="main-content detail-container">
+    <h1 class="detail-title" id="detail-title">Judul Berita</h1>
+    
+    <!-- Gambar utama -->
+    <img id="detail-img" src="" alt="Gambar Berita" class="detail-img" />
+
+    <!-- Deskripsi -->
+    <div class="detail-desc" id="detail-desc"></div>
+
+    <!-- Gambar tambahan -->
+    <div class="detail-gallery">
+      <img id="detail-img2" src="" alt="Gambar Tambahan 1" class="detail-img" />
+      <img id="detail-img3" src="" alt="Gambar Tambahan 2" class="detail-img" />
+      <img id="detail-img4" src="" alt="Gambar Tambahan 3" class="detail-img" />
+    </div>
+  </article>
+</main>
+
+  <!-- Right sidebar -->
+  <aside class="sidebar sidebar-right" aria-label="Sidebar Kanan - Info & Galeri">
+
+    <!-- Logo TNI & Kementerian -->
+    <section aria-label="Logo TNI & KEMHAN">
+      <h3 class="sidebar-title">TENTARA NASIONAL INDONESIA</h3>
+      <div class="related-institutions">
+        <a href="https://tni.mil.id/home" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://www.kindpng.com/picc/m/80-806921_logo-ps-tira-persikabo-hd-png-download.png" 
+                alt="TNI" 
+                class="institution-logo" />
+        </a>
+        <a href="https://tniad.mil.id" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://1.bp.blogspot.com/-hkkkK01zAI4/XqUE_ooLhrI/AAAAAAAAAMg/NLEQ496iDU4s5Ppyc8PnTxTvFIVBFzxLwCLcBGAsYHQ/s1600/TNI-AD%2B%255Bwww.blogovector.com%255D.png" 
+                alt="TNI AD" 
+                class="institution-logo" />
+        </a>
+        <a href="https://tni-au.mil.id/" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://tni-au.mil.id/assets/img/dispenau/logo_tni_au.png" 
+                alt="TNI AU" 
+                class="institution-logo" />
+        </a>
+        <a href="https://www.tnial.mil.id/" target="_blank" rel="noopener noreferrer" class="institution-logo-link">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.Akg1hali8RhOqdowdTObygAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                alt="TNI AL" 
+                class="institution-logo" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Galeri Foto -->
+    <section aria-label="Galeri Foto">
+      <h3 class="sidebar-title">GALERI FOTO</h3>
+      <div class="gallery-btn" tabindex="0" role="button" aria-pressed="false">
+        LIHAT GALERI
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <div class="about-section" aria-label="Tentang Kami">
+      <h3 class="sidebar-title with-icon">
+        Tentang Kami
+      </h3>
+      <p>
+        <strong>Alamat:</strong><br>
+        TNI AU Lanud, Krajan, Saptorenggo, Kec. Pakis, Kabupaten Malang, Jawa Timur 65154, Indonesia<br>
+        Krajan, Saptorenggo, Kec. Pakis, Kabupaten Malang, <br>
+        Jawa Timur 65154, Indonesia
+      </p>
+      <p>
+        <strong>Email:</strong><br>
+        <a href="mailto:infonet@tni-au.mil.id">sampel@tni.id</a>
+      </p>
+    </div>
+    
+    <!-- Sosial Media -->
+    <section class="social-section">
+      <h3 class="sidebar-title">Ikuti Kami</h3>
+      <div class="social-media">
+       <a href="https://www.facebook.com/abd.saleh.39501/" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/lanudabdsaleh/" class="social-btn instagram">
+          <i class="fab fa-instagram"></i>
+         <span>Instagram</span>
+        </a>
+        <a href="#" class="social-btn twitter">
+         <i class="fab fa-x-twitter"></i>
+          <span>Twitter</span>
+       </a>
+       <a href="https://www.youtube.com/@Youtubemilitary" class="social-btn youtube">
+         <i class="fab fa-youtube"></i>
+         <span>YouTube</span>
+       </a>
+      </div>
+    </section>
+
+<section class="sidebar-news-grid">
+  <h3 class="sidebar-title">Berita Lainnya</h3>
+  <div class="news-grid" id="berita-lainnya"></div>
+  <div class="lihat-semua-container">
+    <a href="index.html" class="lihat-semua-btn">Lihat Semua Berita →</a>
+  </div>
+</section>
+
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="footer-bottom">
+  <div class="footer-container">
+    <p>&copy; 2025 Situs Resmi Lanud Abd Saleh - TNI Angkatan Udara. Seluruh hak cipta dilindungi.</p>
+  </div>
+</footer>
+
+<script>
+  // Salin ulang beritaData dari JS utama
+const beritaData = [
+  {
+    img: "assets/image/berita1.jpg",
+    img2: "assets/image/berita1b.jpg",
+    img3: "assets/image/berita1c.jpg",
+    img4: "assets/image/berita1d.jpg",
+    title: "Lanud Abd Saleh dan Insub Laksanakan Ziarah Rombongan Peringati Hari Bakti TNI AU ke-78 di TMP Suropati Malang",
+    desc: `Lanud Abd Saleh dan Insub Laksanakan Ziarah Rombongan Peringati Hari Bakti TNI AU ke-78 di TMP Suropati Malang.
+
+Dalam rangka memperingati Hari Bakti TNI Angkatan Udara ke-78, Lanud Abdulrachman Saleh bersama satuan jajaran (Insub) melaksanakan kegiatan ziarah rombongan di Taman Makam Pahlawan (TMP) Suropati, Kota Malang, Senin (28/7/2025).
+
+Ziarah ini dipimpin langsung oleh Komandan Lanud Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, dan dihadiri oleh Ketua PIA Ardhya Garini Cabang 3/D II Lanud Abdulrachman Saleh, Ny. Uphik Reza Sastranegara beserta pengurus, para pejabat Lanud Abd Saleh dan perwakilan Insub yakni Depohar 30, Yonko 464 Kopasgat, dan Denmatra 2 Kopasgat.
+
+Kegiatan ziarah diawali dengan penghormatan kepada arwah para pahlawan, dilanjutkan dengan peletakan karangan bunga secara simbolis di tugu TMP oleh pimpinan ziarah, dan diakhiri dengan tabur bunga di pusara para pahlawan sebagai bentuk penghormatan dan penghargaan atas jasa-jasa mereka yang telah gugur demi bangsa dan negara.
+
+Sebagai bentuk kepedulian sosial dan penghargaan kepada para penjaga lingkungan TMP, seusai upacara ziarah, Komandan Lanud Abd Saleh turut menyerahkan tali asih kepada petugas kebersihan TMP Suropati.
+
+Melalui kegiatan ini, Lanud Abd Saleh beserta jajaran berupaya meneladani nilai-nilai perjuangan dan pengorbanan para pahlawan, serta menanamkan semangat nasionalisme dan patriotisme kepada seluruh prajurit dalam mewujudkan TNI AU yang AMPHUH (Adaptif, Modern, Profesional, Humanis).`
+  },
+  {
+    img: "assets/image/berita2.jpg",
+    img2: "assets/image/berita2b.jpg",
+    img3: "assets/image/berita2c.jpg",
+    img4: "assets/image/berita2d.jpg",
+    title: "Danlanud Abdulrachman Saleh Sambut Kedatangan Menteri Imigrasi dan Pemasyarakatan di Bandara Abd Saleh Malang.",
+    desc: `Komandan Pangkalan TNI AU Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS., menyambut kedatangan Menteri Imigrasi dan Pemasyarakatan, Jenderal Polisi (Purn) Drs. Agus Andrianto, S.H., M.H., beserta rombongan di Bandara Abdulrachman Saleh Malang, Senin (28/7/2025).
+
+    Kedatangan Menteri dan rombongan dalam rangka kunjungan kerja ke sejumlah instansi di wilayah Malang Raya. Agenda kunjungan kerja tersebut mencakup Lapas Kelas I Ngajum Kabupaten Malang, Kantor Imigrasi Kelas I TPI Malang, serta Lapas Perempuan Kelas IIA Malang.
+
+Turut hadir menyambut kedatangan Menteri dan rombongan di Bandara Abd Saleh antara lain  Kolonel Pnb Dodik Supriyanto, S.Sos., MMDS Kadisops Lanud Abdulrachman Saleh, Bapak Kadiyono, Bc.IP., S.I.P., M.Si.  Kepala Kantor Wilayah Direktorat Jenderal Pemasyarakatan Jawa Timur,  Bapak Heri Azhari  Kakanwil PAS Jawa Timur bidang Pemasyarakatan, Bapak Novianto Sulastono  Kepala Kantor Wilayah Direktorat Jenderal Imigrasi Jawa Timur, Bapak Haris Sukamto  Kepala Kantor Wilayah Kemenkumham Jawa Timur.
+
+
+Kegiatan penyambutan berlangsung dengan penuh kehangatan dan menunjukkan sinergi yang baik antara TNI AU, Kementerian Hukum dan HAM, serta jajaran terkait dalam mendukung kelancaran pelaksanaan tugas negara, khususnya dalam bidang keimigrasian dan pemasyarakatan.
+
+Kunjungan kerja ini diharapkan dapat memperkuat koordinasi antarinstansi dalam rangka peningkatan pelayanan publik serta pembinaan di bidang pemasyarakatan dan imigrasi di wilayah Jawa Timur, khususnya Malang Raya.`
+  },
+  {
+    img: "assets/image/berita3.jpg",
+    img2: "assets/image/berita3b.jpg",
+    img3: "assets/image/berita3c.jpg",
+    img4: "assets/image/berita3d.jpg",
+    title: "Lanud Abd Saleh Bersama Komunitas HDCI Jatim Gelar Safety Riding.",
+    desc: `Lanud Abdulrachman Saleh bersama komunitas motor Harley-Davidson Club Indonesia (HDCI) Jawa Timur menggelar kegiatan Safety Riding yang berlangsung di area Lanud Abd Saleh, Malang, Minggu (4/8/2025).
+
+Kegiatan ini bertujuan meningkatkan kesadaran berkendara yang aman, tertib, dan penuh tanggung jawab di jalan raya, khususnya bagi para pengendara motor besar.
+
+Ketua HDCI Malang, Bapak Farid Nurharto, S.ST., M.MAR. dalam sambutannya menyampaikan apresiasi dan ucapan terima kasih kepada Lanud Abd Saleh yang telah memfasilitasi kegiatan ini. "Kami sangat berterima kasih atas sambutan hangat dari jajaran Lanud Abd Saleh.
+
+Sinergi ini merupakan langkah positif untuk terus membangun budaya berlalu lintas yang aman dan santun," ujarnya.
+
+Kepala Dinas Operasi (Kadisops) Lanud Abd Saleh, Kolonel Pnb Dodik Suprianto, S.Sos., MMDS. Mewakili Komandan Lanud Abd Saleh Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS dalam sambutannya menegaskan pentingnya kesadaran keselamatan dalam berkendara,  "Kami berharap kegiatan ini menjadi contoh nyata bahwa komunitas motor juga bisa menjadi pelopor keselamatan berlalu lintas," ungkapnya.
+
+Kapolresta Kabupaten Malang, AKBP. Danang Setiyo, P.S., SH., S.I.K., M.H juga turut memberikan sambutan yang menekankan pentingnya edukasi dan disiplin berlalu lintas sejak dini. "Kegiatan seperti ini perlu terus digalakkan karena memiliki dampak langsung terhadap kesadaran masyarakat dalam berkendara," ungkapnya.
+
+Bupati Malang, Drs. H.M. Sanusi, M.M.dalam sambutannya mengapresiasi kolaborasi positif antara HDCI dan Lanud Abd Saleh. "Kami berharap kegiatan ini menjadi agenda rutin, karena sangat membantu menciptakan lingkungan berkendara yang lebih aman di wilayah Kabupaten Malang," ujar Bupati di akhir sambutannya.
+
+Sebagai bentuk penghargaan atas dukungan dan kontribusi terhadap kegiatan ini, Ketua HDCI Jawa Timur memberikan piagam penghargaan kepada Lanud Abd Saleh
+
+Acara berlangsung meriah dan penuh keakraban, serta diisi dengan demonstrasi safety riding, coaching clinic, serta ramah tamah antara anggota komunitas HDCI Malang dan personel Lanud Abd Saleh.`
+  },
+  {
+    img: "assets/image/berita4.jpg",
+    img2: "assets/image/berita4b.jpg",
+    img3: "assets/image/berita4c.jpg",
+    img4: "assets/image/berita4d.jpg",
+    title: "Jelang Peringatan Hari Bakti TNI AU ke-78, Lanud Abdulrachman Saleh Gelar Doa Bersama dan Berikan Tali Asih.",
+    desc: `Dalam rangka menyambut peringatan ke-78 Hari Bakti TNI Angkatan Udara yang jatuh pada tanggal 29 Juli 2025, Lanud Abdulrachman Saleh menggelar kegiatan doa bersama yang penuh khidmat di Masjid Baiturachman, Lanud Abdulrachman Saleh, Malang, Senin (21/7/2025).
+
+Kegiatan diawali dengan pelaksanaan sholat Dzuhur berjamaah yang dilanjutkan dengan istighosah dan doa bersama, dipimpin oleh Ketua Takmir Masjid, Ustadz Abdul Majid.
+
+Doa bersama ini diikuti oleh segenap personel Lanud Abdulrachman Saleh, sebagai bentuk rasa syukur serta doa agar TNI AU senantiasa diberikan kekuatan dalam mengabdi kepada bangsa dan negara.
+
+Pada kesempatan tersebut, Komandan Lanud Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, juga memberikan tali asih kepada anak-anak yatim dari Panti Asuhan Annur sebagai wujud kepedulian sosial dan cinta kasih terhadap sesama.
+
+"Kegiatan ini merupakan bentuk rasa syukur serta refleksi atas semangat perjuangan para pahlawan yang telah gugur dalam peristiwa 29 Juli 1947.
+
+Selain itu, ini juga menjadi cerminan kepedulian sosial dan penguatan nilai spiritual, sejalan dengan semangat mewujudkan TNI AU yang Ampuh (Adaptif, Modern, Profesional, Unggul, dan Humanis)," ujar Danlanud.
+
+Doa bersama juga dilaksanakan di Gereja GKPO Amarta bagi yang beragam Kristen dan pura Bhuvana Kertha bagi yang beragama Hindu.
+
+Peringatan Hari Bakti TNI AU ke-78 menjadi momentum penting untuk mengenang jasa para pahlawan TNI Angkatan Udara sekaligus memperkuat semangat pengabdian prajurit TNI AU dalam menjaga kedaulatan udara NKRI dan menjalin kedekatan dengan masyarakat.
+
+Kegiatan Doa bersama dihadiri Ketua pia Ardhya Garini Cabang 3/D II Ny. Uphik Reza Sastranegara, Danwing Udara 2 para pejabat Lanud Abd Saleh dan pengurus Pia Ardhya Garini Cabang 3/ D II.`
+  },
+  {
+    img: "assets/image/berita5.jpg",
+    img2: "assets/image/berita5b.jpg",
+    img3: "assets/image/berita5c.jpg",
+    img4: "assets/image/berita5d.jpg",
+    title: "Kolaborasi Malang Tahes Club dan Lanud Abd Saleh Gelar Bakti Sosial dalam Rangka Peringatan Hari Bakti TNI AU ke-78.",
+    desc: `Dalam rangka memperingati Hari  Bakti Bakti TNI Angkatan Udara ke-78, Malang Tahes Club (MTC) ,YBM PLN, HDCI, JK ONE bersama Lanud Abd Saleh menggelar kegiatan bakti sosial yang bertujuan untuk mempererat tali silaturahmi dan meningkatkan kepedulian sosial kepada masyarakat yang membutuhkan bertempat di Sathar 31 Depohar 30. Malang, Rabu ( 23/7/2025 ).
+
+Kegiatan ini diawali dengan penyerahan secara simbolis bantuan paket sembako dari MTC kepada Lanud Abd Saleh yang nantinya akan disalurkan kepada masyarakat kurang mampu di sekitar wilayah Malang.
+
+Ketua Malang Tahes Club, Bapak yusron, dalam sambutannya menyampaikan rasa syukur dan bangganya dapat turut ambil bagian dalam kegiatan sosial bersama TNI AU.
+"Kolaborasi ini menjadi bentuk nyata kepedulian kami terhadap sesama. Semoga bantuan yang diberikan dapat bermanfaat bagi masyarakat yang membutuhkan, sekaligus memperkuat sinergi antara komunitas dan unsur TNI," ujarnya.
+
+Sementara itu, General Manager YBM PLN Malang Bapak Ahmad Mustaqin juga memberikan apresiasi atas kegiatan yang dilaksanakan secara gotong-royong.
+"Kami percaya bahwa kolaborasi lintas institusi seperti ini dapat menghadirkan dampak yang lebih besar. Semoga kegiatan ini menjadi berkah dan motivasi untuk terus berbagi," ungkapnya.
+
+Komandan Lanud Abd Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, dalam sambutannya menyampaikan terima kasih dan penghargaan atas dukungan dari MTC dan YBM PLN Malang.
+"Bakti sosial ini merupakan bagian dari semangat Hari Bakti TNI AU ke-78 yang mengusung nilai-nilai kepedulian dan pengabdian kepada masyarakat. Terima kasih atas dukungan semua pihak, semoga sinergi seperti ini terus terjalin ke depannya," tutur Danlanud.
+
+Kegiatan ini tidak hanya mempererat hubungan antarlembaga, tetapi juga menjadi wujud nyata dari semangat kebersamaan dalam membantu sesama.
+
+Hadir dalam kegiatan ini, Ketua PIA Ardhya Garini Cab 3 D. II Lanud Abd saleh Ny. Uphik Reza Sastranegara beserta pengurus, Komunitas MTC, YBM PLN Malang, HDCI ( Harley Davidson Club ), Dandepohar 30, Danwing 2, Para Kadis, Ka. RSAU dr. Muhammad Moenir Lanud Abd Saleh, Komandan Satuan dan Insub.`
+  },
+  {
+    img: "assets/image/berita6.jpg",
+    img2: "assets/image/berita6b.jpg",
+    img3: "assets/image/berita6c.jpg",
+    img4: "assets/image/berita6d.jpg",
+    title: "Kadisops Lanud Abd Saleh Hadiri Sidang Senat Terbuka Wisuda Sarjana Terapan Politeknik Angkatan Darat.",
+    desc: `Kepala Dinas Operasi Kadisops Lanud Abd Saleh Kolonel Pnb Dodik Suprianto, S.Sos., MMDS mewakili Komandan Lanud Abd Saleh Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, menghadiri Sidang Senat Terbuka Politeknik Angkatan Darat dalam rangka Wisuda Sarjana Terapan Teknik Tahun Pendidikan 2021–2025, yang dilaksanakan di Aula Politeknik Angkatan Darat, Malang, pada Jumat (24/7/2025).
+
+Kegiatan wisuda ini merupakan momen penting dalam mencetak perwira dan tenaga profesional di bidang teknik pertahanan, sekaligus menandai berakhirnya masa pendidikan bagi para taruna yang telah menyelesaikan program sarjana terapan.
+
+Dalam kesempatan tersebut, Kolonel Pnb Dodik Suprianto menyampaikan apresiasi dan ucapan selamat atas pencapaian para wisudawan serta berharap mereka dapat mengimplementasikan ilmu yang telah diperoleh untuk mendukung tugas-tugas pertahanan negara ke depan.
+
+Wisuda ini bukanlah akhir dari perjalanan, melainkan awal dari pengabdian nyata kepada bangsa dan negara. Semoga para lulusan mampu menjawab tantangan teknologi pertahanan masa kini dan masa depan dengan inovasi dan semangat profesionalisme," ujarnya.
+
+Acara sidang senat terbuka berlangsung khidmat dan dihadiri oleh jajaran TNI AD, civitas akademika Poltekad, keluarga wisudawan, serta para undangan dari instansi militer dan sipil`
+  },
+  {
+    img: "assets/image/berita7.jpg",
+    img2: "assets/image/berita7b.jpg",
+    img3: "assets/image/berita7c.jpg",
+    img4: "assets/image/berita7d.jpg",
+    title: "Personel Lanud Abd Saleh Laksanakan Karya Bakti di TMP Suropati Malang.",
+    desc: `Dalam rangka memperingati Hari Bakti TNI Angkatan Udara ke-78, personel Lanud Abd Saleh melaksanakan kegiatan Karya Bakti bertempat di Taman Makam Pahlawan (TMP) Suropati, Malang, Jumat (24/7/2025).
+
+Kegiatan karya bakti ini melibatkan prajurit dari berbagai satuan di Lanud Abd Saleh dengan sasaran membersihkan area makam pahlawan, merapikan lingkungan sekitar, serta menanam tanaman hias sebagai bentuk penghormatan dan pelestarian nilai-nilai kepahlawanan.
+
+Kegiatan ini dilaksanakan sebagai wujud penghormatan dan penghargaan atas jasa-jasa para pahlawan yang telah gugur dalam perjuangan membela bangsa dan negara.
+
+Melalui karya bakti ini, kami ingin menumbuhkan semangat kebangsaan, nasionalisme, dan rasa hormat kepada para pahlawan. Ini juga menjadi momen refleksi bagi seluruh prajurit TNI AU untuk melanjutkan perjuangan melalui pengabdian terbaik kepada bangsa.
+
+Karya bakti ini juga menjadi bagian dari rangkaian kegiatan sosial dan kemanusiaan yang digelar Lanud Abd Saleh menjelang puncak peringatan Hari Bakti TNI AU ke-78 tahun 2025.`
+  },
+  {
+    img: "assets/image/berita8.jpg",
+    img2: "assets/image/berita8b.jpg",
+    img3: "assets/image/berita8c.jpg",
+    img4: "assets/image/berita8d.jpg",
+    title: "Danlanud Pimpin Serah Terima Jabatan Kadispers dan Kadislog Lanud Abd Saleh, Wujud Dinamika dan Penyegaran Organisasi.",
+    desc: `Bertempat di Gedung Cakrawala Lanud Abdulrachman Saleh, telah dilaksanakan acara Serah Terima Jabatan Kepala Dinas Personel (Kadispers) dan Kepala Dinas Logistik (Kadislog).
+
+Bertindak selaku pimpinan acara, Komandan Lanud Abd Saleh Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS. Jumat, (25/7/ 2025).
+
+Jabatan Kadispers resmi diserahterimakan dari Kolonel Adm Haridinuto, S.T., PGDip., MSS kepada Letkol Pnb Yudhi Bandung Sukarmanto, S.Sos., sedangkan jabatan Kadislog diserahterimakan dari Kolonel Tek Sutarto, S.T., M.A.P. kepada Letkol Tek Saifudin Zuhri, S.T.
+
+Dalam sambutannya, Danlanud menyampaikan bahwa mutasi dan pergantian jabatan di lingkungan TNI Angkatan Udara merupakan bagian dari dinamika organisasi yang bertujuan untuk penyegaran, pengembangan karier, serta optimalisasi pelaksanaan tugas dan fungsi satuan.
+
+“Jabatan bukan hanya amanah, namun juga merupakan kepercayaan dan tanggung jawab yang harus dijalankan dengan dedikasi dan loyalitas tinggi,” tegas Marsma TNI Reza R.R. Sastranegara.
+
+Komandan Lanud menyampaikan ucapan terima kasih dan apresiasi setinggi-tingginya kepada pejabat lama atas segala pengabdian, kinerja, dan kontribusi positif yang telah diberikan selama bertugas di Lanud Abd Saleh. Beliau juga berharap pengalaman yang diperoleh selama bertugas dapat menjadi bekal berharga di penugasan yang baru.
+
+Kepada pejabat baru, Danlanud mengucapkan selamat datang dan bergabung di jajaran pejabat Lanud Abd Saleh, serta berharap agar segera menyesuaikan diri, memahami tugas pokok satuan, dan menjalin sinergi serta komunikasi yang baik dengan seluruh unsur di lingkungan Lanud.
+
+“Saya yakin, dengan integritas, pengalaman, dan semangat pengabdian yang saudara miliki, akan mampu melanjutkan bahkan meningkatkan capaian kinerja yang telah dirintis oleh pejabat sebelumnya,” tambahnya.
+
+Acara sertijab ini turut dihadiri oleh Dandepohar 30, para Kepala Dinas, Kepala RSAU dr. M. Moenir, Komandan Satuan Jajaran Lanud Abd Saleh serta perwakilan unsur insub lainnya.`
+  },
+  {
+    img: "assets/image/berita9.jpg",
+    img2: "assets/image/berita9b.jpg",
+    img3: "assets/image/berita9c.jpg",
+    img4: "assets/image/berita9d.jpg",
+    title: "Lanud Abdulrachman Saleh gelar Puncak bakti sosial di desa Saptorenggo Malang, Wujud Nyata Kepedulian TNI AU untuk Masyarakat.",
+    desc: `Dalam rangka memperingati Hari Bakti TNI Angkatan Udara ke-78, Lanud Abdulrachman Saleh melaksanakan kegiatan Bakti Sosial dan Bakti Kesehatan di Balai Desa Saptorenggo, Kecamatan Pakis, Kabupaten Malang, Minggu (27/7/2025).
+
+Kegiatan ini disambut antusias oleh masyarakat setempat.
+Berbagai layanan sosial dan kesehatan diberikan secara cuma-cuma kepada warga, antara lain, donor darah, pemeriksaan mata, akupuntur, khitanan massal, pijat tradisional (dalong), pembagian 250 paket sembako, pembagian buku dan kacamata gratis, serta bazar murah.
+
+Komandan Lanud Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, dalam sambutannya menyampaikan bahwa kegiatan ini merupakan bagian dari rangkaian peringatan Hari Bakti TNI AU yang puncaknya akan diperingati pada 29 Juli 2025.
+
+Sebelumnya, kegiatan serupa telah dilaksanakan di Kabupaten Blitar dan Kecamatan Puspo, Kabupaten Pasuruan. 
+Danlanud juga mengulas makna sejarah Hari Bakti TNI AU yang berakar dari peristiwa heroik operasi udara pertama TNI AU. Dan gugurnya tiga perintis TNI AU Komodor Muda Udara Agustinus Adisutjipto, Komodor Muda Udara Prof. Dr. Abdulrachman Saleh, dan Opsir Muda Udara I Adi Soemarmo Wirjokusumo gugur setelah pesawat mereka ditembak jatuh di Desa Ngoto, Yogyakarta.
+
+“Melalui kegiatan ini, kami ingin menunjukkan kepedulian kami kepada masyarakat. Meski bentuknya sederhana, semua ini berangkat dari hati yang tulus untuk bisa saling berbagi,” ukap Marsma TNI Reza R.R. Sastranegara.
+
+Peringatan Hari Bakti tahun ini mengusung tema: “Dengan Meneladani Semangat Juang Para Pendahulu, TNI AU Siap Mewujudkan Angkatan Udara yang Adaptif, Modern, Profesional, Unggul dan Humanis Menuju Indonesia Maju.”
+
+Kegiatan bakti sosial ini turut dihadiri oleh Sekretaris Daerah Kabupaten Malang mewakili Bupati Malang, serta jajaran Forkopimda Kabupaten Malang. Dalam sambutan tertulisnya, Bupati Malang menyampaikan apresiasi atas perhatian dan kontribusi nyata TNI AU kepada masyarakat.
+
+“Atas nama Pemerintah Kabupaten Malang, saya menyampaikan terima kasih dan penghargaan setinggi-tingginya kepada jajaran TNI AU, khususnya Lanud Abdulrachman Saleh, yang telah memilih Desa Saptorenggo sebagai lokasi kegiatan bakti sosial. 
+
+Kegiatan ini sangat menyentuh rasa kemanusiaan kita bersama dan menjadi cerminan sinergi nyata antara TNI dan rakyat. TNI adalah bagian dari rakyat, lahir dari rakyat, dan bekerja untuk rakyat,” ujar Sekda Kabupaten Malang saat membacakan sambutan Bupati.
+
+Sebagai penutup, Komandan Lanud menyampaikan apresiasi kepada seluruh pihak yang telah berkontribusi dalam menyukseskan kegiatan ini, serta berharap semangat kebersamaan dan pengabdian dapat terus terpelihara demi kemajuan masyarakat dan bangsa.`
+  }
+];
+
+const urlParams = new URLSearchParams(window.location.search);
+const id = parseInt(urlParams.get('id'), 10);
+
+// Jika berita ditemukan
+if (!isNaN(id) && beritaData[id]) {
+  const berita = beritaData[id];
+
+  // Isi Judul & Gambar Utama
+  document.getElementById("detail-img").src = berita.img;
+  document.getElementById("detail-img").alt = berita.title;
+  document.getElementById("detail-title").textContent = berita.title;
+
+  // Format paragraf isi berita
+  const formattedDesc = berita.desc
+    .split(/\n\s*\n/)
+    .map(p => `<p>${p.trim()}</p>`)
+    .join('');
+  document.getElementById("detail-desc").innerHTML = formattedDesc;
+
+  // Tambahkan gambar 2–4 jika ada
+  const img2 = document.getElementById("detail-img2");
+  const img3 = document.getElementById("detail-img3");
+  const img4 = document.getElementById("detail-img4");
+
+  if (berita.img2) {
+    img2.src = berita.img2;
+    img2.alt = `${berita.title} - Gambar 2`;
+    img2.style.display = "block";
+  } else {
+    img2.style.display = "none";
+  }
+
+  if (berita.img3) {
+    img3.src = berita.img3;
+    img3.alt = `${berita.title} - Gambar 3`;
+    img3.style.display = "block";
+  } else {
+    img3.style.display = "none";
+  }
+
+  if (berita.img4) {
+    img4.src = berita.img4;
+    img4.alt = `${berita.title} - Gambar 4`;
+    img4.style.display = "block";
+  } else {
+    img4.style.display = "none";
+  }
+
+} else {
+  document.querySelector(".container").innerHTML = "<p>Berita tidak ditemukan.</p><a href='index.html'>← Kembali</a>";
+}
+
+// Sidebar Berita Lainnya
+const newsGrid = document.getElementById("berita-lainnya");
+
+if (newsGrid) {
+  beritaData.forEach((item, index) => {
+    if (index !== id) {
+      const card = document.createElement("div");
+      card.className = "news-card";
+
+      const img = document.createElement("img");
+      img.src = item.img;
+      img.alt = item.title;
+      img.onerror = () => img.style.display = "none";
+
+      const link = document.createElement("a");
+      link.href = `berita_detail.html?id=${index}`;
+      link.title = item.title;
+      link.textContent = item.title;
+
+      card.appendChild(img);
+      card.appendChild(link);
+      newsGrid.appendChild(card);
+    }
+  });
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+

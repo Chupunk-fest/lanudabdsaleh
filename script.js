@@ -11,6 +11,11 @@ function toggleSubmenu() {
 // Data berita
 const beritaData = [
   {
+    img: "assets/image/berita10.jpg",
+    title: "Danlanud Abd Saleh Ikuti Groundbreaking Dan Peresmian SPPG TNI AU Secara Vicon",
+    desc: "Komandan Lanud Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, mengikuti kegiatan Groundbreaking dan Peresmian Dapur SPPG (Satuan Pelayanan Pemenuhan Gizi) TNI AU secara virtual yang dipimpin langsung oleh Kepala Staf Angkatan Udara (Kasau) Marsekal TNI Mohamad Tonny Harjono, S.E., M.M. bertempat di SPPG Lanud Abdulrachman Saleh, Tamanharjo, Singosari, Kabupaten Malang, Rabu (6/8/2025)."
+  },
+  {
     img: "assets/image/berita1.jpg",
     title: "Lanud Abd Saleh dan Insub Laksanakan Ziarah Rombongan Peringati Hari Bakti TNI AU ke-78 di TMP Suropati Malang",
     desc: "Dalam rangka memperingati Hari Bakti TNI Angkatan Udara ke-78, Lanud Abdulrachman Saleh bersama satuan jajaran (Insub) melaksanakan kegiatan ziarah rombongan di Taman Makam Pahlawan (TMP) Suropati, Kota Malang, Senin (28/7/2025)."

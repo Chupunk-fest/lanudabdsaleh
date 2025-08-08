@@ -11,6 +11,26 @@ function toggleSubmenu() {
 // Data berita
 const beritaData = [
   {
+    img: "assets/image/berita14.jpg",
+    title: "Kadisops Lanud  Abd Saleh Hadiri “Kopi Senja” Rakor Sinergi bersama Forkopimda Kota Malang",
+    desc: "Kadisops Lanud Abd Saleh, Kolonel Pnb Dodik Suprianto mewakili komandan Lanud Abd Saleh Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS menghadiri kegiatan Kopi Senja bertempat di The Shalimar Boutique Hotel. Malang, Rabu ( 6/8/2025 )."
+  },
+  {
+    img: "assets/image/berita13.jpg",
+    title: "Jelang HUT Wara je 61, Wara Lanud Abd Saleh dan Insub Ikuti Pembekalan Ibu Winayadhati Kanya Sena Secara Virtual ",
+    desc: "Personel Wanita Angkatan Udara (Wara) Lanud Abd Saleh dan Insub mengikuti pembekalan dan ceramah oleh Ibu Isa M.Tonny Harjono selaku Ibu Winayadhati Kanya Sena (Ibu Asuh Wara) secara Virtual bertempat di Gedung Binayuda Lanud Abd saleh, Malang Rabu, 6/8/2025)."
+  },  
+  {
+    img: "assets/image/berita12.jpg",
+    title: "Wanita Angkatan Udara Lanud Abd Saleh Gelar Bakti Sosial Dengan ( LKSLU ) Lembaga Kesejahteraan Sosial Lanjut Usia KNDJH di Kota Malang.",
+    desc: "Dalam rangka memperingati Hari Ulang Tahun Wanita Angkatan Udara (WARA) ke-62, para personel WARA Lanud Abd Saleh melaksanakan kegiatan bakti sosial dengan Lembaga Kesejahteraan Sosial Lanjut Usia  (LKSLU) KNDJH bertempat di Kedungkandang Kota Malang, Selasa (5/8/2025)."
+  },  
+  {
+    img: "assets/image/berita11.jpg",
+    title: "Lanud Abd Saleh Siap Bangun SPPG Kedua dan ketiga Dukung Pemerataan Gizi Menuju Generasi Emas 2045",
+    desc: "Lanud Abdulrachman Saleh menandai dimulainya pembangunan Satuan Pelayanan Pemenuhan Gizi (SPPG) ke-2 dan ke-3 dengan prosesi pemotongan tumpeng oleh Komandan Lanud Abd Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS bertempat di area GPP 5, tepat di sebelah SPPG pertama, Rabu (6/8/2025)."
+  },
+  {
     img: "assets/image/berita10.jpg",
     title: "Danlanud Abd Saleh Ikuti Groundbreaking Dan Peresmian SPPG TNI AU Secara Vicon",
     desc: "Komandan Lanud Abdulrachman Saleh, Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS, mengikuti kegiatan Groundbreaking dan Peresmian Dapur SPPG (Satuan Pelayanan Pemenuhan Gizi) TNI AU secara virtual yang dipimpin langsung oleh Kepala Staf Angkatan Udara (Kasau) Marsekal TNI Mohamad Tonny Harjono, S.E., M.M. bertempat di SPPG Lanud Abdulrachman Saleh, Tamanharjo, Singosari, Kabupaten Malang, Rabu (6/8/2025)."
@@ -150,4 +170,5 @@ lihatSemua.href = "index.html";
 lihatSemua.className = "lihat-semua-link";
 lihatSemua.textContent = "Lihat Semua Berita →";
 newsSidebar.appendChild(lihatSemua);
+
 

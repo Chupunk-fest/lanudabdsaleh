@@ -1,3 +1,20 @@
+<?php
+require_once 'db.php';
+$query = "SELECT * FROM berita ORDER BY created_at DESC LIMIT 5";
+$result = $conn->query($query);
+
+// Siapkan array untuk menyimpan berita
+$berita = array();
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        $berita[] = $row;
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -282,6 +299,7 @@
          <span>YouTube</span>
        </a>
       </div>
+
     <!-- KOLOM PENGADUAN -->
     <section class="complaint-section" aria-label="Kolom Pengaduan">
       <h3 class="sidebar-title with-icon">
@@ -312,6 +330,7 @@
           <ul>
             <li><i class="fas fa-check-circle"></i> Layanan resmi pemerintah</li>
             <li><i class="fas fa-check-circle"></i> Gratis dan terbuka untuk publik</li>
+            <li><i class="fas fa-check-circle"></i> Terlindungi oleh UU No. 14 Tahun 2008</li>
           </ul>
         </div>
         
@@ -323,7 +342,6 @@
         </div>
       </div>
     </section>
-  </aside>
   </aside>
 </div>
 

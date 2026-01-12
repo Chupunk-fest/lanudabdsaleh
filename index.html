@@ -32,7 +32,7 @@
 
     <!-- Menu Desktop -->
     <div class="nav-menu">
-      <a href="#" class="nav-link">Beranda</a>
+      <a href="index.html" class="nav-link">Beranda</a>
 
       <!-- Dropdown Sejarah -->
       <div class="dropdown">
@@ -40,7 +40,7 @@
           Sejarah <i class="fas fa-caret-down"></i>
         </button>
         <div class="dropdown-menu">
-          <a href="#lanud" class="dropdown-item">Sejarah Lanud</a>
+          <a href="sejarah.html" class="dropdown-item">Sejarah Lanud</a>
           <a href="#sk4" class="dropdown-item">Skuadron 4</a>
           <a href="#sk21" class="dropdown-item">Skuadron 21</a>
           <a href="#sk32" class="dropdown-item">Skuadron 32</a>
@@ -48,9 +48,9 @@
         </div>
       </div>
 
-      <a href="#portfolio" class="nav-link">Berita</a>
-      <a href="#testimonials" class="nav-link">Rekruitmen</a>
-      <a href="#contact" class="nav-link">Galeri</a>
+      <a href="#berita" class="nav-link">Berita</a>
+      <a href="#rekruitmen" class="nav-link">Rekruitmen</a>
+      <a href="galery.html" class="nav-link">Galeri</a>
       <a href="#about" class="nav-link">Tentang Kami</a>
     </div>
     
@@ -62,20 +62,20 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu hidden" id="mobile-menu">
-    <a href="#home" class="mobile-menu-link">Beranda</a>
+    <a href="index.html" class="mobile-menu-link">Beranda</a>
     <button onclick="toggleSubmenu()" class="mobile-menu-link w-full text-left">
       Sejarah <i class="fas fa-caret-down float-right pt-1"></i>
     </button>
     <div id="submenu" class="submenu hidden">
-      <a href="#lanud" class="submenu-link">Sejarah Lanud</a>
+      <a href="sejarah.html" class="submenu-link">Sejarah Lanud</a>
       <a href="#sk4" class="submenu-link">Skuadron 4</a>
       <a href="#sk21" class="submenu-link">Skuadron 21</a>
       <a href="#sk32" class="submenu-link">Skuadron 32</a>
       <a href="#skatek" class="submenu-link">Skatek 022</a>
     </div>
-    <a href="#portfolio" class="mobile-menu-link">Berita</a>
-    <a href="#testimonials" class="mobile-menu-link">Rekruitmen</a>
-    <a href="#contact" class="mobile-menu-link">Galeri</a>
+    <a href="#berita" class="mobile-menu-link">Berita</a>
+    <a href="#rekruitmen" class="mobile-menu-link">Rekruitmen</a>
+    <a href="galery.html" class="mobile-menu-link">Galeri</a>
     <a href="#about" class="mobile-menu-link">Tentang Kami</a>
   </div>
 </nav>
@@ -99,31 +99,31 @@
       <h3 class="sidebar-title">Menu Navigasi Sejarah</h3>
       <ul class="nav-menu-list">
         <li>
-          <a href="#" class="nav-menu-item">
+          <a href="sejarah.html" class="nav-menu-item">
             <div class="pentagon-icon" aria-hidden="true"></div>
             Sejarah Lanud
           </a>
         </li>
         <li>
-          <a href="#" class="nav-menu-item">
+          <a href="#sk4" class="nav-menu-item">
             <div class="pentagon-icon" aria-hidden="true"></div>
             Sejarah Skuadron 4
           </a>
         </li>
         <li>
-          <a href="#" class="nav-menu-item">
+          <a href="#sk21" class="nav-menu-item">
             <div class="pentagon-icon" aria-hidden="true"></div>
             Sejarah Skuadron 21
           </a>
         </li>
         <li>
-          <a href="#" class="nav-menu-item">
+          <a href="#sk32" class="nav-menu-item">
             <div class="pentagon-icon" aria-hidden="true"></div>
             Sejarah Skuadron 32
           </a>
         </li>
         <li>
-          <a href="#" class="nav-menu-item">
+          <a href="#skatek" class="nav-menu-item">
             <div class="pentagon-icon" aria-hidden="true"></div>
             Sejarah Skatek 022
           </a>
@@ -133,7 +133,7 @@
 
     <div class="mt-20">
       <h4 class="sidebar-title">Komandan Lanud Abd Saleh</h4>
-      <img src="assets/image/Danlanud.jpg" class="sidebar-image" />
+      <img src="assets/image/Danlanud.jpg" alt="Komandan Lanud Abd Saleh" class="sidebar-image" />
       <h5 class="sidebar-image-caption">
         Marsma TNI Reza R.R. Sastranegara, S.Sos., M.A.P., MNSS.
       </h5>
@@ -161,40 +161,51 @@
     </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="main-content" aria-label="Konten utama">
-    <h2 class="main-title">
-      Berita Utama <span>Lanud Abd Saleh</span>
-    </h2>
+<!-- Main content -->
+<main class="main-content" aria-label="Konten utama">
+  <h2 class="main-title">
+    Berita Utama <span>Lanud Abd Saleh</span>
+  </h2>
 
-    <div class="news-update-wrapper">
-      <section class="py-1">
-        <h2 class="section-title">
-          Berita Terkini
-        </h2>
+  <div class="news-update-wrapper">
+    <section class="py-1">
+      <h2 class="section-title">
+        Berita Terkini
+      </h2>
 
-        <div id="news-container" class="news-container"></div>
+      <div id="news-container" class="news-container">
+        <?php if (!empty($berita)): ?>
+          <?php foreach ($berita as $item): ?>
+            <div class="news-item">
+              <h3><?php echo htmlspecialchars($item['judul']); ?></h3>
+              <p><?php 
+                $konten = htmlspecialchars($item['konten']);
+                echo strlen($konten) > 200 ? substr($konten, 0, 200) . '...' : $konten;
+              ?></p>
+              <small><?php echo date('d F Y', strtotime($item['created_at'])); ?></small>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <div class="news-item">
+            <h3>Tidak Ada Berita</h3>
+            <p>Belum ada berita yang tersedia untuk ditampilkan.</p>
+            <small>-</small>
+          </div>
+        <?php endif; ?>
+      </div>
 
-        <!-- Tombol Pagination -->
-        <div class="pagination">
-          <button
-            id="prevBtn"
-            class="pagination-btn"
-            disabled>
-            ← Sebelumnya
-          </button>
-
-          <span id="pageIndicator" class="page-indicator"></span>
-
-          <button
-            id="nextBtn"
-            class="pagination-btn">
-            Berikutnya →
-          </button>
-        </div>
-      </section>
-    </div>
-  </main>
+      <div class="pagination">
+        <button id="prevBtn" class="pagination-btn" disabled>
+          ← Sebelumnya
+        </button>
+        <span id="pageIndicator" class="page-indicator">Halaman 1</span>
+        <button id="nextBtn" class="pagination-btn">
+          Berikutnya →
+        </button>
+      </div>
+    </section>
+  </div>
+</main>
 
   <!-- Right sidebar -->
   <aside class="sidebar sidebar-right" aria-label="Sidebar Kanan - Info & Galeri">
@@ -228,7 +239,7 @@
     <!-- Galeri Foto -->
     <section aria-label="Galeri Foto">
       <h3 class="sidebar-title">GALERI FOTO</h3>
-      <div class="gallery-btn" tabindex="0" role="button" aria-pressed="false">
+      <div class="gallery-btn" onclick="window.location.href='galery.html'" tabindex="0" role="button" aria-pressed="false">
         LIHAT GALERI
       </div>
     </section>
@@ -271,17 +282,57 @@
          <span>YouTube</span>
        </a>
       </div>
+    <!-- KOLOM PENGADUAN -->
+    <section class="complaint-section" aria-label="Kolom Pengaduan">
+      <h3 class="sidebar-title with-icon">
+        <i class="fas fa-comment-dots"></i> Layanan Pengaduan
+      </h3>
+      
+      <div class="complaint-box">
+        <div class="complaint-header">
+          <i class="fas fa-headset complaint-icon"></i>
+          <h4>Saluran Pengaduan Publik</h4>
+        </div>
+        
+        <p class="complaint-description">
+          Sampaikan pengaduan, aspirasi, atau laporan Anda melalui portal resmi pemerintah:
+        </p>
+        
+        <a href="https://lapor.go.id/" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="complaint-btn">
+          <i class="fas fa-external-link-alt"></i>
+          <span>Akses LAPOR!</span>
+          <small>Portal Pengaduan Nasional</small>
+        </a>
+        
+        <div class="complaint-info">
+          <h5>Informasi Penting:</h5>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Layanan resmi pemerintah</li>
+            <li><i class="fas fa-check-circle"></i> Gratis dan terbuka untuk publik</li>
+          </ul>
+        </div>
+        
+        <div class="complaint-hotline">
+          <h5><i class="fas fa-phone-alt"></i> Hotline Pengaduan:</h5>
+          <p class="hotline-number">
+            <a href="tel:1500055">1500 055</a>
+          </p>
+        </div>
+      </div>
     </section>
+  </aside>
   </aside>
 </div>
 
 <footer class="footer-bottom">
   <div class="footer-container">
-    <p>&copy; 2025 Situs Resmi Lanud Abd Saleh - TNI Angkatan Udara. Seluruh hak cipta dilindungi.</p>
+    <p>&copy; <?php echo date('Y'); ?> Situs Resmi Lanud Abd Saleh - TNI Angkatan Udara. Seluruh hak cipta dilindungi.</p>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
-
 </html>

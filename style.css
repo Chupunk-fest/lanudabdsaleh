@@ -877,3 +877,210 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+.complaint-section {
+  margin-top: 25px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.complaint-section .sidebar-title.with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.complaint-section .sidebar-title.with-icon i {
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+.complaint-box {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #3498db;
+}
+
+.complaint-icon {
+  font-size: 1.8rem;
+  color: #3498db;
+  background: #ebf5fb;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.complaint-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.complaint-description {
+  color: #5a6268;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.complaint-btn {
+  display: block;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(231, 76, 60, 0.2);
+}
+
+.complaint-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+  background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%);
+  color: white;
+}
+
+.complaint-btn:active {
+  transform: translateY(0);
+}
+
+.complaint-btn i {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.complaint-btn span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.complaint-btn small {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.complaint-info {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border-left: 4px solid #2ecc71;
+}
+
+.complaint-info h5 {
+  color: #27ae60;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.complaint-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.complaint-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.complaint-info li i {
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.complaint-hotline {
+  background: #fff3cd;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #ffeaa7;
+}
+
+.complaint-hotline h5 {
+  color: #856404;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.complaint-hotline h5 i {
+  color: #f39c12;
+}
+
+.hotline-number {
+  margin: 0;
+}
+
+.hotline-number a {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.hotline-number a:hover {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
+.hotline-hours {
+  margin: 5px 0 0 0;
+  font-size: 0.85rem;
+  color: #7d6608;
+}
+
+/* Responsive untuk kolom pengaduan */
+@media (max-width: 768px) {
+  .complaint-section {
+    margin: 20px 0;
+    padding: 12px;
+  }
+  
+  .complaint-box {
+    padding: 15px;
+  }
+  
+  .complaint-btn {
+    padding: 12px;
+  }
+  
+  .hotline-number a {
+    font-size: 1.3rem;
+  }
+}

@@ -887,8 +887,8 @@ img {
 /* ===== STYLE KOLOM PENGADUAN ===== */
 
 .complaint-section {
-  margin-top: 20px;
-  padding: 5px 15px;
+  margin-top: 25px;
+  padding: 15px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 10px;
   border: 1px solid #dee2e6;
@@ -953,10 +953,10 @@ img {
   background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
   color: white;
   text-align: center;
-  padding: 5px;
+  padding: 15px;
   border-radius: 8px;
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
@@ -995,16 +995,16 @@ img {
 
 .complaint-info {
   background: #f8f9fa;
-  padding: 8px 15px;
+  padding: 15px;
   border-radius: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-left: 4px solid #2ecc71;
 }
 
 .complaint-info h5 {
   color: #27ae60;
-  margin: 0 0 3px 0;
-  font-size: 0.85rem;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
 }
 
 .complaint-info ul {
@@ -1016,9 +1016,9 @@ img {
 .complaint-info li {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 3px;
-  font-size: 0.7rem;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
   color: #495057;
 }
 
@@ -1030,21 +1030,20 @@ img {
 
 .complaint-hotline {
   background: #fff3cd;
-  padding: 5px 15px;
+  padding: 15px;
   border-radius: 6px;
   text-align: center;
   border: 1px solid #ffeaa7;
-  margin-bottom: 10px;
 }
 
 .complaint-hotline h5 {
   color: #856404;
-  margin: 0 0 2px 0;
-  font-size: 0.75rem;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .complaint-hotline h5 i {
@@ -1057,7 +1056,7 @@ img {
 
 .hotline-number a {
   color: #e74c3c;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   text-decoration: none;
   transition: color 0.2s;
